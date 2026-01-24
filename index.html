@@ -1,620 +1,341 @@
-</div>
 <!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CorexBabsSoft Hola Mamá - Landing Page</title>
-  <meta name="description" content="Landing page moderna para CorexBabsSoft. Software, automatizacion y experiencia digital." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>COREXBABS — Landing</title>
+  <meta name="description" content="COREXBABS: desarrollo web, automatización y seguridad. Sitio servido por GitHub Pages." />
+  <meta name="theme-color" content="#0b0f14" />
   <style>
-    :root {
-      color-scheme: light;
-      --bg: #f7f3ee;
-      --bg-2: #ece6de;
-      --ink: #1b1a16;
-      --muted: #5b564f;
-      --accent: #ff6a3d;
-      --accent-2: #f1c6ff;
-      --accent-3: #4cd7c0;
-      --card: #ffffff;
-      --line: #e4ddd4;
-      --shadow: 0 20px 60px rgba(27, 26, 22, 0.12);
+    :root{
+      --bg:#0b0f14;
+      --card:#111826;
+      --muted:#9fb0c0;
+      --text:#e8f0ff;
+      --line:rgba(255,255,255,.10);
+      --accent:#68f0b7;
+      --accent2:#7aa7ff;
+      --shadow: 0 18px 55px rgba(0,0,0,.35);
       --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Space Grotesk", "Segoe UI", Tahoma, sans-serif;
-      color: var(--ink);
-      background: radial-gradient(1200px 600px at 80% -10%, #ffe2d5 0%, transparent 60%),
-        radial-gradient(900px 500px at 10% -20%, #d6f9f4 0%, transparent 55%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(104,240,183,.20), transparent 55%),
+        radial-gradient(900px 500px at 80% 20%, rgba(122,167,255,.18), transparent 55%),
+        radial-gradient(700px 400px at 50% 90%, rgba(255,255,255,.06), transparent 60%),
+        var(--bg);
       min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
     }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-      background-size: 18px 18px;
-      opacity: 0.4;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      position: relative;
-      z-index: 1;
-    }
-
-    .container {
-      width: min(1100px, 92vw);
+    .wrap{
+      max-width: 980px;
       margin: 0 auto;
-      padding: 24px 0 80px;
+      padding: 28px 18px 80px;
     }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 22px 0;
-      font-weight: 600;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 18px;
-      letter-spacing: 0.3px;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: conic-gradient(from 120deg, var(--accent), var(--accent-3), var(--accent-2));
-      box-shadow: var(--shadow);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .nav-actions {
-      display: flex;
-      gap: 12px;
-    }
-
-    .btn {
-      padding: 12px 20px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: var(--card);
-      font-weight: 600;
-      font-size: 14px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn.primary {
-      background: var(--ink);
-      color: #fff;
-      border-color: var(--ink);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 48px;
-      align-items: center;
-      padding: 40px 0 20px;
-    }
-
-    .hero h1 {
-      font-family: "Fraunces", "Times New Roman", serif;
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: 1.05;
-      margin: 0 0 18px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: var(--muted);
-      margin: 0 0 26px;
-      max-width: 520px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
       gap: 14px;
-      align-items: center;
+      padding: 10px 0 24px;
     }
-
-    .hero-note {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 10px;
-    }
-
-    .hero-card {
-      position: relative;
-      background: var(--card);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      padding: 28px;
-      border: 1px solid var(--line);
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255, 106, 61, 0.18), transparent 60%);
-      z-index: 0;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .metric {
-      padding: 16px;
-      border-radius: 16px;
-      background: #f9f7f3;
-      border: 1px solid #efe7dd;
-    }
-
-    .metric h3 {
-      margin: 0 0 6px;
-      font-size: 28px;
-    }
-
-    .metric span {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .orb {
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(0.5px);
-      opacity: 0.9;
-      animation: float 10s ease-in-out infinite;
-    }
-
-    .orb.one {
-      width: 140px;
-      height: 140px;
-      background: radial-gradient(circle, #ffcab8 0%, #ff6a3d 60%, transparent 70%);
-      top: -30px;
-      right: -20px;
-      animation-delay: 0s;
-    }
-
-    .orb.two {
-      width: 100px;
-      height: 100px;
-      background: radial-gradient(circle, #c2fff4 0%, #4cd7c0 60%, transparent 70%);
-      bottom: -20px;
-      left: -10px;
-      animation-delay: 2s;
-    }
-
-    .section {
-      padding: 64px 0 20px;
-    }
-
-    .section h2 {
-      font-family: "Fraunces", serif;
-      font-size: clamp(28px, 3vw, 40px);
-      margin-bottom: 12px;
-    }
-
-    .section p.lead {
-      color: var(--muted);
-      max-width: 620px;
-      margin: 0 0 30px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      padding: 22px;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
-      min-height: 220px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .step {
-      padding: 20px;
-      border-radius: 16px;
-      border: 1px dashed #d5cdc2;
-      background: rgba(255, 255, 255, 0.6);
-    }
-
-    .step span {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--ink);
-      color: #fff;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .showcase {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .showcase-panel {
-      background: var(--card);
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      padding: 26px;
-      box-shadow: var(--shadow);
-      display: grid;
+    .brand{
+      display:flex;
+      align-items:center;
       gap: 12px;
     }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    .logo{
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: var(--shadow);
     }
-
-    .tag {
+    .brand h1{
+      margin:0;
+      font-size: 16px;
+      letter-spacing: .8px;
+    }
+    .brand small{
+      display:block;
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+    .pill{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
       padding: 8px 12px;
       border-radius: 999px;
-      background: #f3eee7;
+      font-family: var(--mono);
       font-size: 12px;
+      color: var(--muted);
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      white-space: nowrap;
     }
-
-    .cta {
-      margin-top: 40px;
-      border-radius: 24px;
-      padding: 36px;
-      background: linear-gradient(120deg, #1b1a16 0%, #3a3228 60%, #ff6a3d 100%);
-      color: #fff;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-      align-items: center;
+    .btn{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor:pointer;
+      font-weight: 600;
     }
-
-    .cta h3 {
-      margin: 0 0 10px;
-      font-family: "Fraunces", serif;
-      font-size: clamp(24px, 3vw, 34px);
+    .btn:hover{ background: rgba(255,255,255,.09); }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items: stretch;
     }
-
-    .cta p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.8);
+    @media (max-width: 860px){
+      .hero{ grid-template-columns: 1fr; }
+      header{ align-items:flex-start; flex-direction:column; }
     }
-
-    .cta form {
-      display: flex;
-      flex-wrap: wrap;
+    .card{
+      border: 1px solid var(--line);
+      background: rgba(17,24,38,.75);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card .inner{ padding: 18px; }
+    .title{
+      margin:0 0 10px 0;
+      font-size: 34px;
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+    }
+    .subtitle{
+      margin:0 0 18px 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .ctaRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    a.link{
+      color: var(--text);
+      text-decoration:none;
+    }
+    a.link:hover{ text-decoration: underline; }
+    .metrics{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
       gap: 12px;
-      justify-content: flex-end;
     }
-
-    .cta input {
-      padding: 12px 16px;
-      border-radius: 999px;
-      border: none;
-      min-width: 220px;
+    .metric{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .metric b{
+      display:block;
+      font-size: 20px;
+      letter-spacing: -0.4px;
+    }
+    .metric span{
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+      display:block;
+      font-family: var(--mono);
+    }
+    .section{
+      margin-top: 18px;
+    }
+    .section h2{
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      letter-spacing: .2px;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 860px){
+      .grid3{ grid-template-columns: 1fr; }
+    }
+    .item{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .item h3{
+      margin: 0 0 6px 0;
       font-size: 14px;
     }
-
-    .cta button {
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: none;
-      background: #fff;
-      color: #1b1a16;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .footer {
-      padding: 40px 0;
+    .item p{
+      margin: 0;
       color: var(--muted);
       font-size: 13px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid var(--line);
-      margin-top: 60px;
+      line-height: 1.5;
+    }
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      font-family: var(--mono);
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(12px);
-      animation: rise 0.7s ease forwards;
+    /* Watermark fijo = sello de que es TU sitio */
+    .watermark{
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      z-index: 999999;
+      border: 1px dashed rgba(255,255,255,.25);
+      background: rgba(0,0,0,.35);
+      color: rgba(255,255,255,.85);
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      backdrop-filter: blur(10px);
+      user-select: none;
     }
-
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.2s; }
-    .delay-3 { animation-delay: 0.3s; }
-    .delay-4 { animation-delay: 0.4s; }
-
-    @keyframes rise {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
-
-    @media (max-width: 900px) {
-      .hero,
-      .showcase,
-      .cta {
-        grid-template-columns: 1fr;
-      }
-
-      .cards,
-      .steps {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .cta form {
-        justify-content: flex-start;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .cards,
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        padding: 22px;
-      }
-
-      .footer {
-        flex-direction: column;
-        gap: 12px;
-        align-items: flex-start;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal,
-      .orb {
-        animation: none;
-        opacity: 1;
-        transform: none;
-      }
-    }
+    .watermark b{ color: var(--accent); }
   </style>
 </head>
 <body>
-  <div class="page">
-    <div class="container">
-      <nav class="nav">
-        <a class="brand" href="#">
-          <span class="brand-mark"></span>
-          <span>CorexBabsSoft</span>
-        </a>
-        <div class="nav-links">
-          <a href="#servicios">Servicios</a>
-          <a href="#proceso">Proceso</a>
-          <a href="#casos">Casos</a>
-          <a href="#contacto">Contacto</a>
-        </div>
-        <div class="nav-actions">
-          <a class="btn" href="#contacto">Agenda una demo</a>
-          <a class="btn primary" href="#contacto">Empezar ahora</a>
-        </div>
-      </nav>
-
-      <section class="hero" id="top">
+  <!-- COREXBABS build marker: if you see this in view-source, it's yours -->
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
         <div>
-          <h1 class="reveal">Software con alma humana y velocidad real.</h1>
-          <p class="reveal delay-1">
-            Creamos productos digitales que convierten ideas en sistemas utiles.
-            Diseño, desarrollo y automatizacion para equipos que necesitan avanzar sin friccion.
+          <h1>COREXBABS</h1>
+          <small id="subline">Sitio personal • GitHub Pages</small>
+        </div>
+      </div>
+
+      <div class="pill" title="Identificador único de build">
+        <span>BUILD</span>
+        <span id="buildId">loading…</span>
+        <button class="btn" id="copyBtn" style="padding:8px 10px;border-radius:999px;">Copiar</button>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="card">
+        <div class="inner">
+          <h2 class="title">Tu landing está online ✅</h2>
+          <p class="subtitle">
+            Si estás viendo esto en <b>corexbabs.tech</b>, entonces el dominio está apuntando bien a tu repositorio.
+            Este template tiene sello de identidad (build + watermark) para que no haya dudas.
           </p>
-          <div class="hero-actions reveal delay-2">
-            <a class="btn primary" href="#contacto">Quiero mi propuesta</a>
-            <a class="btn" href="#servicios">Ver servicios</a>
-          </div>
-          <div class="hero-note reveal delay-3">Entrega en semanas, no meses. Equipo senior, foco en impacto.</div>
-        </div>
 
-        <div class="hero-card reveal delay-2">
-          <div class="orb one"></div>
-          <div class="orb two"></div>
-          <div class="hero-grid">
+          <div class="ctaRow">
+            <a class="btn link" href="https://github.com/bastianbaeza" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn link" href="mailto:contacto@corexbabs.tech">Contactar</a>
+            <a class="btn link" href="#servicios">Ver servicios</a>
+          </div>
+
+          <footer>
+            Repo recomendado: <b>bastianbaeza/corexbabs.github.io</b> • Branch: <b>main</b> • Folder: <b>/ (root)</b>
+          </footer>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner">
+          <div class="metrics">
             <div class="metric">
-              <h3>+40%</h3>
-              <span>mejora en conversion</span>
+              <b>COREXBABS</b>
+              <span>Marca personal</span>
             </div>
             <div class="metric">
-              <h3>72h</h3>
-              <span>para primer prototipo</span>
+              <b>HTTPS</b>
+              <span>Forzado en GitHub Pages</span>
             </div>
             <div class="metric">
-              <h3>98%</h3>
-              <span>satisfaccion clientes</span>
+              <b>DNS</b>
+              <span>A + CNAME configurados</span>
             </div>
             <div class="metric">
-              <h3>24/7</h3>
-              <span>monitoreo y soporte</span>
+              <b>Build ID</b>
+              <span>Visible arriba + watermark</span>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section class="section" id="servicios">
-        <h2 class="reveal">Servicios pensados para crecer</h2>
-        <p class="lead reveal delay-1">
-          Cada entrega combina estrategia, producto y tecnologia. No solo construimos, tambien
-          alineamos tu vision con resultados medibles.
-        </p>
-        <div class="cards">
-          <article class="card reveal delay-1">
-            <h3>Producto digital</h3>
-            <p>
-              Roadmaps claros, prototipos rapidos y MVPs listos para validar en el mundo real.
+          <div class="section" id="servicios">
+            <h2>Servicios</h2>
+            <div class="grid3">
+              <div class="item">
+                <h3>Desarrollo Web</h3>
+                <p>Landing pages, sitios estáticos, portafolios, MVP rápido.</p>
+              </div>
+              <div class="item">
+                <h3>Automatización</h3>
+                <p>Scripts, bots, flujos, integraciones y productividad.</p>
+              </div>
+              <div class="item">
+                <h3>Seguridad</h3>
+                <p>Revisión básica, hardening y buenas prácticas AppSec.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Debug rápido</h2>
+            <p class="subtitle" style="margin-bottom:0">
+              Si alguna vez ves la web en blanco, abre <span style="font-family:var(--mono)">view-source:</span> y busca el texto
+              <b>COREXBABS build marker</b>. Si está, tu HTML llegó bien.
             </p>
-          </article>
-          <article class="card reveal delay-2">
-            <h3>Automatizacion inteligente</h3>
-            <p>
-              Integraciones y flujos que eliminan tareas manuales y liberan a tu equipo.
-            </p>
-          </article>
-          <article class="card reveal delay-3">
-            <h3>Experiencia de usuario</h3>
-            <p>
-              Interfaces con identidad, claras y audaces, que hacen que tu marca se sienta unica.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="proceso">
-        <h2 class="reveal">Proceso simple, resultados precisos</h2>
-        <p class="lead reveal delay-1">
-          Trabajamos en ciclos cortos. Cada semana hay entregables, decisiones y visibilidad total.
-        </p>
-        <div class="steps">
-          <div class="step reveal delay-1">
-            <span>1</span>
-            <h4>Descubrimiento</h4>
-            <p>Entendemos tu negocio, definimos el reto y priorizamos impacto.</p>
-          </div>
-          <div class="step reveal delay-2">
-            <span>2</span>
-            <h4>Construccion</h4>
-            <p>Diseño y desarrollo simultaneo con prototipos en vivo.</p>
-          </div>
-          <div class="step reveal delay-3">
-            <span>3</span>
-            <h4>Escala</h4>
-            <p>Medimos, optimizamos y dejamos todo listo para crecer.</p>
           </div>
         </div>
-      </section>
-
-      <section class="section" id="casos">
-        <h2 class="reveal">Casos que hablan por si solos</h2>
-        <p class="lead reveal delay-1">
-          Una mezcla de data, diseño y tecnologia para lanzar experiencias que se sienten vivas.
-        </p>
-        <div class="showcase">
-          <div class="showcase-panel reveal delay-1">
-            <strong>Plataforma de ventas B2B</strong>
-            <p>Pipeline 3x mas rapido con automatizaciones y paneles claros.</p>
-            <div class="tag-list">
-              <span class="tag">CRM</span>
-              <span class="tag">Dashboards</span>
-              <span class="tag">Integraciones</span>
-            </div>
-          </div>
-          <div class="showcase-panel reveal delay-2">
-            <strong>App de operaciones internas</strong>
-            <p>Menos errores, mas trazabilidad y reportes en tiempo real.</p>
-            <div class="tag-list">
-              <span class="tag">Ops</span>
-              <span class="tag">Automatizacion</span>
-              <span class="tag">UX Research</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta" id="contacto">
-          <div>
-            <h3>¿Listo para acelerar tu proximo lanzamiento?</h3>
-            <p>Cuéntanos tu reto y armamos un plan claro en menos de 48 horas.</p>
-          </div>
-          <form>
-            <input type="email" name="email" placeholder="tu correo" aria-label="Tu correo" />
-            <button type="submit">Recibir propuesta</button>
-          </form>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <span>CorexBabsSoft · Software con impacto real.</span>
-        <span>hola@corexbabssoft.com</span>
-      </footer>
+      </div>
     </div>
   </div>
+
+  <div class="watermark">
+    <b>COREXBABS</b> • <span id="wmBuild">build</span>
+  </div>
+
+  <script>
+    // Build ID único y visible (para confirmar que ES TU index.html)
+    const now = new Date();
+    const pad = (n) => String(n).padStart(2, "0");
+    const buildId =
+      `${now.getFullYear()}${pad(now.getMonth()+1)}${pad(now.getDate())}-` +
+      `${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+
+    document.getElementById("buildId").textContent = buildId;
+    document.getElementById("wmBuild").textContent = buildId;
+
+    // Copiar buildId
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(buildId);
+        document.getElementById("copyBtn").textContent = "Copiado ✅";
+        setTimeout(() => document.getElementById("copyBtn").textContent = "Copiar", 1200);
+      }catch(e){
+        alert("No pude copiar automáticamente. Build ID: " + buildId);
+      }
+    });
+
+    // Extra: muestra dominio actual (sirve para confirmar desde dónde se está cargando)
+    const host = location.host || "local";
+    document.getElementById("subline").textContent = `Sitio personal • ${host} • GitHub Pages`;
+  </script>
 </body>
 </html>
-
 
 
