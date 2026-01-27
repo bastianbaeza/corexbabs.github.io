@@ -677,3 +677,15 @@ img {
     margin-left: 0;
   }
 }
+.module-card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: #e3e8f7;
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.module-card li {
+  line-height: 1.4;
+}
