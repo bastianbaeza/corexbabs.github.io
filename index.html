@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CorexBabs | Servicios Digitales</title>
+    <title>CorexBabs Tech | Landing Page</title>
     <meta
       name="description"
-      content="Servicios digitales de CorexBabs: landing pages, automatizaciones, sistemas internos y soporte continuo para tu negocio."
+      content="Centraliza ventas, finanzas, soporte y marketing en un solo tablero. Listo para escalar con seguridad y roles."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,92 +15,139 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/pages/landing.css" />
+    <link rel="stylesheet" href="css/landing-sikura.css" />
   </head>
   <body>
     <div class="bg-shape shape-1" aria-hidden="true"></div>
     <div class="bg-shape shape-2" aria-hidden="true"></div>
     <div class="bg-shape shape-3" aria-hidden="true"></div>
 
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <div class="container nav">
-        <a class="brand" href="#inicio">
-          <span class="brand-mark"></span>
-          CorexBabs<span>Studio</span>
-        </a>
+        <!-- Brand Section (Left) -->
+        <div class="brand-section">
+          <img
+            src="assets/corexbabs-logo-circle.png"
+            alt="Corex.Babs Logo"
+            class="brand-logo"
+            loading="lazy"
+          />
+          <a class="brand" href="#inicio">Corex.Babs</a>
+        </div>
+
+        <!-- Toggle Button (Mobile) -->
         <button
           class="nav-toggle"
           id="nav-toggle"
           aria-expanded="false"
-          aria-controls="nav-links"
-          aria-label="Abrir menu"
+          aria-controls="nav-menu"
+          aria-label="Abrir menú"
         >
-          Menu
+          <span class="sr-only">Abrir menú</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
         </button>
-        <nav class="nav-links" id="nav-links">
-          <a href="#servicios">Servicios</a>
-          <a href="#proceso">Proceso</a>
-          <a href="#planes">Planes</a>
-          <a href="#contacto">Contacto</a>
+
+        <!-- Nav Menu (Center) -->
+        <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#producto">Producto</a></li>
+            <li><a href="#modulos">Módulos</a></li>
+            <li><a href="#integraciones">Integraciones</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#seguridad">Seguridad</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li class="mobile-only">
+              <a class="btn header-cta" href="#contacto">COTIZAR</a>
+            </li>
+          </ul>
         </nav>
-        <a class="btn primary header-cta" href="#contacto">Cotizar</a>
+
+        <!-- CTA Button (Right - Desktop) -->
+        <a class="btn header-cta desktop-only" href="#contacto">COTIZAR</a>
       </div>
     </header>
 
     <main id="inicio">
-      <section class="hero">
-        <div class="container hero-grid">
+      <!-- HERO SIKURA DESIGN -->
+      <section class="hero-sikura">
+        <div class="hero-sikura-container">
           <div class="hero-content">
-            <span class="hero-badge">Servicios digitales hechos a medida</span>
-            <h1 class="hero-title">
-              CorexBabs mantiene tu <span>negocio</span> y tus
-              <span>clientes</span> en crecimiento
+            <div class="sikura-pill" role="status" aria-label="Featured">
+              Soluciones TI para empresas y pymes
+            </div>
+
+            <h1 class="sikura-title">
+              <span class="muted">TECNOLOGÍA Y SOPORTE TI</span>
+              <span class="bright">PARA HACER CRECER TU NEGOCIO</span>
             </h1>
-            <p class="hero-lead">
-              Landing pages, sitios web y automatizaciones para vender mas,
-              responder rapido y ordenar tu operacion desde un solo lugar.
+
+            <p class="sikura-subtitle">
+              Desarrollo, redes, ciberseguridad y soporte continuo.
+              Implementamos soluciones claras, rápidas y escalables para tu
+              operación.
             </p>
-            <div class="hero-actions">
-              <a class="btn primary hero-cta" href="#contacto">Cotizar</a>
-              <a class="btn outline hero-secondary" href="#servicios"
-                >Ver servicios</a
-              >
-            </div>
-            <div class="hero-meta">
-              <span class="pill">Entrega rapida</span>
-              <span class="pill">Soporte continuo</span>
-              <span class="pill">Resultados medibles</span>
-            </div>
+
+            <a
+              href="#contacto"
+              class="sikura-cta"
+              aria-label="Agendar diagnóstico"
+            >
+              AGENDAR DIAGNÓSTICO
+            </a>
           </div>
-          <div class="hero-highlight" aria-hidden="true">
-            <div class="highlight-card">
-              <p>Conversion optimizada</p>
-              <strong>Landing + Copy</strong>
-            </div>
-            <div class="highlight-card">
-              <p>Automatizacion</p>
-              <strong>WhatsApp + Email</strong>
-            </div>
-            <div class="highlight-card">
-              <p>Soporte activo</p>
-              <strong>Mejoras mensuales</strong>
-            </div>
+
+          <div class="hero-media">
+            <img
+              src="assets/hero/hero-noc-engineer.png"
+              alt="Ingeniería TI y monitoreo de seguridad"
+              width="900"
+              height="600"
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
 
-      <section class="proof" id="servicios">
+      <section class="certifications" id="certificaciones">
+        <div class="container">
+          <div class="section-header">
+            <h2>Certificaciones</h2>
+            <p>Credenciales vigentes que respaldan nuestro trabajo.</p>
+          </div>
+          <div class="cert-logos">
+            <img
+              src="assets/certs/certiprof-cehpc.png"
+              alt="CertiProf - Ethical Hacking (CEHPC)"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="assets/certs/certiprof-lifelong-learning-2026.png"
+              alt="CertiProf - Lifelong Learning 2026"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="proof" id="producto">
         <div class="container">
           <div class="proof-card reveal">
-            <h2>Servicios CorexBabs</h2>
+            <h2>Implementamos y mantenemos tu tecnología</h2>
             <p>
-              Soluciones digitales para atraer clientes, ordenar procesos y
-              escalar tu operacion sin caos.
+              Soporte técnico, redes, ciberseguridad y desarrollo a medida.
+              Resolvemos incidentes rápido, documentamos todo y te dejamos un
+              plan claro para crecer sin sorpresas.
             </p>
             <div class="proof-badges">
-              <span>Landing pages</span>
-              <span>Sitios web</span>
-              <span>Automatizacion</span>
-              <span>Sistemas internos</span>
+              <span>Soporte</span>
+              <span>Redes</span>
+              <span>Seguridad</span>
+              <span>Desarrollo</span>
+              <span>Mantención</span>
             </div>
           </div>
         </div>
@@ -109,159 +156,359 @@
       <section class="features">
         <div class="container">
           <div class="section-header">
-            <h2>Lo que podemos construir para ti</h2>
+            <h2>Nuestros servicios</h2>
             <p>
-              Servicios pensados para generar resultados reales, no solo
-              apariencia.
+              Soluciones integrales para tu infraestructura TI: desde soporte
+              diario hasta transformación digital.
             </p>
           </div>
           <div class="feature-grid">
             <article class="feature-card reveal">
               <div class="feature-icon">01</div>
-              <h3>Landing pages</h3>
+              <h3>Soporte y mantención TI</h3>
               <p>
-                Paginas enfocadas en conversion y ventas con copy optimizado.
+                Remoto y terreno. Rendimiento de equipos, actualización de
+                drivers, mantenimiento preventivo y gestión de activos.
               </p>
+              <div class="service-media">
+                <img
+                  src="assets/services/service-01-it-support.png"
+                  alt="Soporte y mantención TI"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </article>
             <article class="feature-card reveal">
               <div class="feature-icon">02</div>
-              <h3>Web corporativa</h3>
+              <h3>Redes y conectividad</h3>
               <p>
-                Sitios institucionales claros, rapidos y listos para escalar.
+                Diseño e implementación de WiFi y cableado. Configuración,
+                estabilidad y monitoreo de red para máximo rendimiento.
               </p>
+              <div class="service-media">
+                <img
+                  src="assets/services/service-02-networks.png"
+                  alt="Redes y conectividad"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </article>
             <article class="feature-card reveal">
               <div class="feature-icon">03</div>
-              <h3>Automatizaciones</h3>
+              <h3>Ciberseguridad y backups</h3>
               <p>
-                Flujos con WhatsApp, email y CRM para ahorrar tiempo.
+                Copias de seguridad automáticas, hardening de sistemas y
+                prevención de amenazas. Protección proactiva de tus datos.
               </p>
+              <div class="service-media">
+                <img
+                  src="assets/services/service-03-cybersecurity.png"
+                  alt="Ciberseguridad y backups"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </article>
             <article class="feature-card reveal">
               <div class="feature-icon">04</div>
-              <h3>Sistemas internos</h3>
+              <h3>Desarrollo y automatización</h3>
               <p>
-                Dashboards y herramientas a medida para tu operacion.
+                Soluciones web, dashboards personalizados e integración de
+                sistemas. Automatiza procesos y acelera tu operación.
               </p>
+              <div class="service-media">
+                <img
+                  src="assets/services/service-04-dev-automation.png"
+                  alt="Desarrollo y automatización"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </article>
             <article class="feature-card reveal">
               <div class="feature-icon">05</div>
-              <h3>Integraciones</h3>
+              <h3>Consultoría TI</h3>
               <p>
-                Conectamos tus herramientas para que todo funcione en un solo
-                flujo.
+                Diagnóstico de infraestructura, roadmap tecnológico y evaluación
+                de soluciones para tu crecimiento.
               </p>
+              <div class="service-media">
+                <img
+                  src="assets/services/service-05-it-consulting.png"
+                  alt="Consultoría TI"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </article>
             <article class="feature-card reveal">
               <div class="feature-icon">06</div>
-              <h3>Mantenimiento</h3>
+              <h3>Soporte escalado</h3>
               <p>
-                Soporte tecnico, mejoras y seguimiento despues de la entrega.
+                Contrato SLA con tiempos de respuesta garantizados,
+                disponibilidad 24/7 y equipo dedicado a tu empresa.
               </p>
+              <div class="service-media">
+                <img
+                  src="assets/services/service-06-sla-support.png"
+                  alt="Soporte escalado (SLA 24/7)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="workflow" id="proceso">
-        <div class="container workflow-grid">
-          <div class="workflow-copy reveal">
-            <h2>Proceso simple, resultados claros</h2>
-            <p>
-              Trabajamos por etapas para que avances rapido y sin sorpresas.
-            </p>
-          </div>
-          <div class="workflow-steps">
-            <div class="step-card reveal">
-              <span>1</span>
-              <h3>Diagnostico</h3>
-              <p>Definimos objetivos, publico y funcionalidades clave.</p>
+      <section class="workflow">
+        <div class="container">
+          <div class="workflow-grid">
+            <!-- Columna izquierda: imagen -->
+            <div class="process-media">
+              <img
+                src="assets/services/process-diagnostic.png"
+                alt="Diagnóstico TI y planificación"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div class="step-card reveal">
-              <span>2</span>
-              <h3>Construccion</h3>
-              <p>Diseno, desarrollo y pruebas con entregas parciales.</p>
-            </div>
-            <div class="step-card reveal">
-              <span>3</span>
-              <h3>Optimizacion</h3>
-              <p>Medimos, ajustamos y escalamos con soporte continuo.</p>
+
+            <!-- Columna derecha: contenido -->
+            <div class="process-content">
+              <div class="workflow-copy reveal">
+                <h2>De la evaluación a la solución en 3 pasos</h2>
+                <p>
+                  Un proceso claro para resolver tu problema TI sin letras
+                  chicas.
+                </p>
+              </div>
+              <div class="workflow-steps">
+                <div class="step-card reveal">
+                  <span>1</span>
+                  <h3>Diagnóstico</h3>
+                  <p>
+                    Levantamos requerimientos, revisamos tu infraestructura y
+                    detectamos la causa raíz. Entregamos informe y plan de
+                    acción.
+                  </p>
+                </div>
+                <div class="step-card reveal">
+                  <span>2</span>
+                  <h3>Implementación</h3>
+                  <p>
+                    Ejecutamos la solución: configuración, instalación,
+                    desarrollo o mejora de rendimiento. Validamos contigo y
+                    dejamos checklist.
+                  </p>
+                </div>
+                <div class="step-card reveal">
+                  <span>3</span>
+                  <h3>Soporte y mantención</h3>
+                  <p>
+                    Monitoreo, respaldos, mejoras y respuesta ante incidentes.
+                    Mantén tu operación estable y segura.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="modules" id="planes">
+      <section class="modules" id="modulos">
         <div class="container">
           <div class="section-header">
-            <h2>Planes y formatos de trabajo</h2>
+            <h2>Servicios listos para implementar</h2>
             <p>
-              Elige la modalidad que mejor se ajusta a tu negocio.
+              Soluciones TI para empresas y pymes: soporte, redes, seguridad y
+              desarrollo a medida.
             </p>
           </div>
           <div class="modules-grid">
             <div class="module-card reveal">
-              <h3>Starter</h3>
-              <p>Landing page + integracion basica.</p>
+              <h3>Soporte y mantención TI</h3>
+              <p>
+                Diagnóstico, reparación, optimización y soporte remoto/en
+                terreno.
+              </p>
+            </div>
+            <div class="module-card reveal">
+              <h3>Redes y conectividad</h3>
+              <p>
+                WiFi empresarial, cableado, routers, VLAN, estabilidad y
+                rendimiento.
+              </p>
+            </div>
+            <div class="module-card reveal">
+              <h3>Ciberseguridad y respaldos</h3>
+              <p>
+                Hardening, protección, backups 3-2-1 y recuperación ante
+                incidentes.
+              </p>
+            </div>
+            <div class="module-card reveal">
+              <h3>Servidores y nube</h3>
+              <p>
+                Windows/Linux, NAS, virtualización, M365/Workspace y monitoreo.
+              </p>
+            </div>
+            <div class="module-card reveal">
+              <h3>Desarrollo y automatización</h3>
+              <p>
+                Web, APIs, dashboards, integraciones y automatización de
+                procesos.
+              </p>
+            </div>
+            <div class="module-card reveal">
+              <h3>Auditoría y continuidad</h3>
+              <p>
+                Evaluación de riesgos, plan de mejora y documentación operativa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="integraciones">
+        <div class="container">
+          <div class="section-header">
+            <h2>Herramientas que integramos para tu operación</h2>
+            <p>
+              Configuramos y conectamos tus plataformas para mejorar
+              comunicación, seguridad y productividad.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <div class="feature-icon">01</div>
+              <h3>Correo y mensajería</h3>
+              <p>
+                Microsoft 365 / Gmail + WhatsApp Business. Plantillas, firmas y
+                configuración segura.
+              </p>
+
+              <!-- Imagen estilo Wix -->
+              <div class="tool-media">
+                <img
+                  src="assets/services/integration-01-mail-whatsapp.png"
+                  alt="Correo y mensajería: Microsoft 365, Gmail y WhatsApp Business"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+            <article class="feature-card reveal">
+              <div class="feature-icon">02</div>
+              <h3>Productividad y colaboración</h3>
+              <p>
+                Drive/OneDrive, Teams/Meet, permisos y estructura para trabajar
+                ordenado.
+              </p>
+
+              <div class="tool-media">
+                <img
+                  src="assets/services/tool-02-productividad.png"
+                  alt="Productividad y colaboración"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+            <article class="feature-card reveal">
+              <div class="feature-icon">03</div>
+              <h3>Respaldo y seguridad</h3>
+              <p>
+                Backups automatizados, MFA y políticas básicas para proteger
+                cuentas y archivos.
+              </p>
+
+              <!-- Imagen estilo Wix -->
+              <div class="tool-media">
+                <img
+                  src="assets/services/tools-03-backup-security.png"
+                  alt="Respaldo y seguridad"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="modules" id="precios">
+        <div class="container">
+          <div class="section-header">
+            <h2>Planes claros para comenzar</h2>
+            <p>
+              Elija un plan según su necesidad: diagnóstico, soporte mensual o
+              proyecto a medida.
+            </p>
+          </div>
+          <div class="modules-grid">
+            <div class="module-card reveal">
+              <h3>Diagnóstico TI</h3>
+              <p>Evaluación inicial + plan de acción.</p>
               <ul>
-                <li>Copy y estructura</li>
-                <li>Diseno responsive</li>
-                <li>Formulario de contacto</li>
+                <li>Revisión de equipos, red y seguridad básica</li>
+                <li>Informe con hallazgos y prioridades</li>
+                <li>Recomendaciones + estimación de mejoras</li>
               </ul>
             </div>
             <div class="module-card reveal">
-              <h3>Business</h3>
-              <p>Web + automatizaciones esenciales.</p>
+              <h3>Soporte Mensual</h3>
+              <p>Mantención y respuesta ante incidentes.</p>
               <ul>
-                <li>Multiples secciones</li>
-                <li>Integraciones con CRM</li>
-                <li>Panel de gestion inicial</li>
+                <li>Soporte remoto y/o en terreno (según acuerdo)</li>
+                <li>Mantenimiento preventivo (actualizaciones, backups)</li>
+                <li>Gestión de incidentes y seguimiento</li>
               </ul>
             </div>
             <div class="module-card reveal">
-              <h3>Custom</h3>
-              <p>Solucion completa a medida.</p>
+              <h3>Proyecto a Medida</h3>
+              <p>Implementaciones y desarrollos.</p>
               <ul>
-                <li>Arquitectura personalizada</li>
-                <li>Roles y seguridad</li>
-                <li>Soporte continuo</li>
+                <li>Redes/WiFi/servidores/nube</li>
+                <li>Automatizaciones o desarrollo web</li>
+                <li>Documentación y entrega formal</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="security">
+      <section class="security" id="seguridad">
         <div class="container security-grid">
           <div class="security-card reveal">
-            <h2>Confianza y respaldo tecnico</h2>
+            <h2>Seguridad lista para crecer contigo</h2>
             <p>
-              Construimos con buenas practicas para que tu plataforma sea
-              estable, rapida y segura.
+              La plataforma est&aacute; preparada para sumar login seguro, roles
+              y permisos granulares para proteger tu informaci&oacute;n
+              sensible.
             </p>
             <ul>
-              <li>Codigo limpio y documentado.</li>
-              <li>Entregas por etapas con seguimiento.</li>
-              <li>Soporte post-lanzamiento.</li>
+              <li>Accesos privados por rol y &aacute;rea.</li>
+              <li>Historial de actividad y auditor&iacute;a.</li>
+              <li>Backups y control de datos cr&iacute;ticos.</li>
             </ul>
           </div>
           <div class="security-panel reveal">
             <div>
-              <h3>Stack disponible</h3>
+              <h3>Roadmap inmediato</h3>
               <p>
-                Trabajamos con herramientas modernas y compatibles con tu
-                crecimiento.
+                Este trimestre se habilita la capa de autenticaci&oacute;n y
+                autorizaci&oacute;n para separar usuarios, equipos y permisos.
               </p>
               <div class="security-tags">
-                <span>HTML/CSS/JS</span>
-                <span>Node.js</span>
-                <span>PostgreSQL</span>
-                <span>Automatizacion</span>
+                <span>Login</span>
+                <span>Roles</span>
+                <span>Permisos</span>
+                <span>Auditoria</span>
               </div>
             </div>
             <div class="security-highlight">
-              <p>Entrega clara, soporte real.</p>
-              <strong>Listo para escalar.</strong>
+              <p>Acceso privado solo para tu equipo.</p>
+              <strong>Listo para producci&oacute;n.</strong>
             </div>
           </div>
         </div>
@@ -270,39 +517,46 @@
       <section class="cta">
         <div class="container cta-card reveal">
           <div>
-            <h2>Hagamos crecer tu negocio</h2>
+            <h2>Ponga su TI en orden, desde esta semana.</h2>
             <p>
-              Coordinemos una llamada y definimos el plan ideal para ti.
+              Agende un diagnóstico y reciba un plan de acción con prioridades,
+              costos y tiempos.
             </p>
           </div>
-          <a class="btn primary" href="#contacto">Agendar reunion</a>
+          <a class="btn primary" href="#contacto">Quiero cotizar</a>
         </div>
       </section>
 
-      <section class="faq">
+      <section class="faq" id="faq">
         <div class="container">
           <div class="section-header">
             <h2>Preguntas frecuentes</h2>
-            <p>Respuestas rapidas para avanzar sin dudas.</p>
+            <p>Respuestas claras para avanzar sin dudas.</p>
           </div>
           <div class="faq-grid">
             <div class="faq-card reveal">
-              <h3>&iquest;Cuanto demora un proyecto?</h3>
+              <h3>&iquest;C&oacute;mo es el proceso de trabajo?</h3>
               <p>
-                Una landing puede estar lista en 7-10 dias. Proyectos grandes
-                se coordinan por etapas.
+                Diagn&oacute;stico breve → propuesta con alcance y costos →
+                implementaci&oacute;n → soporte y seguimiento.
               </p>
             </div>
             <div class="faq-card reveal">
-              <h3>&iquest;Puedo pedir mejoras luego?</h3>
+              <h3>&iquest;Trabajan remoto o en terreno?</h3>
               <p>
-                Si. Puedes contratar soporte mensual o mejoras puntuales.
+                Ambos. Soporte remoto para resolver rápido y visitas en terreno
+                cuando el caso lo requiere.
               </p>
             </div>
             <div class="faq-card reveal">
-              <h3>&iquest;Trabajan con equipos remotos?</h3>
+              <h3>
+                &iquest;Qu&eacute; incluye la cotizaci&oacute;n y qu&eacute;
+                garantías entregan?
+              </h3>
               <p>
-                Si. Coordinamos por videollamada y entregas semanales.
+                Incluye alcance, entregables, tiempos y condiciones. La garantía
+                depende del servicio y se especifica por escrito en la
+                propuesta.
               </p>
             </div>
           </div>
@@ -312,45 +566,96 @@
       <section class="contact" id="contacto">
         <div class="container contact-grid">
           <div class="contact-copy reveal">
-            <h2>Cuentalo y lo construimos</h2>
+            <h2>Cotiza tu servicio TI</h2>
             <p>
-              Escribenos y te respondemos con una propuesta clara y tiempos
-              reales.
+              Cuéntanos qué necesitas y te enviamos una propuesta con alcance,
+              costos y tiempos.
             </p>
             <div class="contact-info">
-              <p><strong>Email:</strong> hola@corexbabs.tech</p>
-              <p><strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00</p>
+              <p><strong>Email:</strong> contacto@corexbabs.tech</p>
+              <p>
+                <strong>Horario:</strong> Lunes a Viernes, 09:00–18:00 (GMT-3)
+              </p>
             </div>
           </div>
-          <form
-            class="contact-form reveal"
-            action="mailto:hola@corexbabs.tech"
-            method="post"
-            enctype="text/plain"
-          >
+          <form id="contact-form" class="contact-form reveal" method="post">
             <label>
               Nombre
-              <input type="text" name="name" placeholder="Tu nombre" required />
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
             </label>
             <label>
               Email
-              <input type="email" name="email" placeholder="tu@email.com" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="tu@email.com"
+                required
+              />
             </label>
             <label>
               Empresa
-              <input type="text" name="company" placeholder="Nombre de tu empresa" />
+              <input
+                type="text"
+                name="empresa"
+                placeholder="Nombre de tu empresa"
+              />
             </label>
             <label>
               Mensaje
               <textarea
-                name="message"
+                name="mensaje"
                 rows="4"
-                placeholder="Cuentanos lo que necesitas"
+                placeholder="Describe el problema, cantidad de equipos y comuna (si aplica)."
                 required
               ></textarea>
             </label>
-            <button class="btn primary" type="submit">Enviar mensaje</button>
+            <button class="btn primary" type="submit">
+              Solicitar cotización
+            </button>
+            <p
+              id="form-success"
+              style="
+                display: none;
+                margin-top: 1rem;
+                color: #4caf50;
+                font-size: 0.95rem;
+              "
+            >
+              Listo. Se abrió tu correo para enviar la solicitud.
+            </p>
           </form>
+          <script>
+            document
+              .getElementById("contact-form")
+              .addEventListener("submit", function (e) {
+                e.preventDefault();
+                const nombre = document.querySelector(
+                  'input[name="nombre"]',
+                ).value;
+                const email = document.querySelector(
+                  'input[name="email"]',
+                ).value;
+                const empresa = document.querySelector(
+                  'input[name="empresa"]',
+                ).value;
+                const mensaje = document.querySelector(
+                  'textarea[name="mensaje"]',
+                ).value;
+
+                const subject = "Solicitud de cotización - Corex.Babs";
+                const body = `Nombre: ${nombre}\nEmail: ${email}\nEmpresa: ${empresa}\n\nMensaje:\n${mensaje}`;
+
+                const mailtoLink = `mailto:contacto@corexbabs.tech?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailtoLink;
+
+                document.getElementById("form-success").style.display = "block";
+              });
+          </script>
         </div>
       </section>
     </main>
@@ -358,21 +663,28 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <h3>CorexBabs Studio</h3>
-          <p>Servicios digitales para vender y automatizar.</p>
+          <h3>CorexBabs Tech</h3>
+          <p>Servicios de Ingeniería en Computación para empresas y pymes.</p>
+          <p>
+            <strong>Contacto:</strong>
+            <a href="mailto:contacto@corexbabs.tech">contacto@corexbabs.tech</a>
+          </p>
         </div>
         <div class="footer-links">
-          <a href="#servicios">Servicios</a>
-          <a href="#proceso">Proceso</a>
-          <a href="#planes">Planes</a>
+          <a href="#producto">Producto</a>
+          <a href="#modulos">Servicios</a>
+          <a href="#seguridad">Seguridad</a>
           <a href="#contacto">Contacto</a>
         </div>
         <div class="footer-note">
-          <span>2026 &copy; CorexBabs. Todos los derechos reservados.</span>
+          <span
+            >2026 &copy; CorexBabs Tech. Todos los derechos reservados.</span
+          >
         </div>
       </div>
     </footer>
 
     <script src="js/landing.js"></script>
+    <script src="js/landing-sikura.js"></script>
   </body>
 </html>
