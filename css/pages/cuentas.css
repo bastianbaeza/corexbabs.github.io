@@ -1,0 +1,337 @@
+﻿      .cuentas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .cuenta-card {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #4caf50;
+      }
+
+      .cuenta-card.llena {
+        border-left-color: #ff9800;
+      }
+
+      .cuenta-card.expirada {
+        border-left-color: #f44336;
+      }
+
+      .cuenta-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .cuenta-titulo {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .cuenta-estado {
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .estado-disponible {
+        background: #4caf50;
+        color: white;
+      }
+
+      .estado-vendida {
+        background: #2196f3;
+        color: white;
+      }
+
+      .estado-bloqueada {
+        background: #f44336;
+        color: white;
+      }
+
+      .cuenta-info {
+        margin: 10px 0;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .cuenta-info strong {
+        color: #333;
+      }
+
+      .slots-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 15px 0;
+        padding: 10px;
+        background: #f5f5f5;
+        border-radius: 6px;
+      }
+
+      .slots-bar {
+        flex: 1;
+        height: 8px;
+        background: #e0e0e0;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .slots-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #4caf50, #45a049);
+        transition: width 0.3s ease;
+      }
+
+      .slots-texto {
+        font-size: 13px;
+        font-weight: 500;
+        color: #666;
+        white-space: nowrap;
+      }
+
+      .cuenta-acciones {
+        display: flex;
+        gap: 8px;
+        margin-top: 15px;
+      }
+
+      .btn-detalle {
+        flex: 1;
+        padding: 8px 16px;
+        background: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .btn-detalle:hover {
+        background: #1976d2;
+      }
+
+      .btn-editar {
+        padding: 8px 12px;
+        background: #ff9800;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .btn-editar:hover {
+        background: #f57c00;
+      }
+
+      .btn-eliminar {
+        padding: 8px 12px;
+        background: #f44336;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .btn-eliminar:hover {
+        background: #d32f2f;
+      }
+
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+      }
+
+      .modal-content {
+        background: white;
+        margin: 50px auto;
+        padding: 30px;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 8px;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .modal-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .close {
+        font-size: 28px;
+        font-weight: bold;
+        color: #999;
+        cursor: pointer;
+      }
+
+      .close:hover {
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .form-group textarea {
+        min-height: 80px;
+        resize: vertical;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .slots-list {
+        margin-top: 20px;
+      }
+
+      .slot-item {
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        border-left: 3px solid #4caf50;
+      }
+
+      .slot-item.vencido {
+        border-left-color: #f44336;
+        background: #fff5f5;
+      }
+
+      .slot-item.por-vencer {
+        border-left-color: #ff9800;
+        background: #fff8f0;
+      }
+
+      .slot-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+
+      .slot-cliente {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .slot-fecha {
+        font-size: 12px;
+        color: #666;
+      }
+
+      .btn-liberar {
+        padding: 6px 12px;
+        background: #f44336;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+
+      .btn-liberar:hover {
+        background: #d32f2f;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .stat-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 32px;
+        font-weight: bold;
+        color: #4caf50;
+        margin: 10px 0;
+      }
+
+      .stat-label {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .alerta {
+        background: #fff3cd;
+        border: 1px solid #ffc107;
+        color: #856404;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+      }
+
+      .credenciales {
+        background: #f0f0f0;
+        padding: 10px;
+        border-radius: 4px;
+        margin: 10px 0;
+        font-family: monospace;
+      }
+
+      .credenciales-ocultas {
+        filter: blur(5px);
+        user-select: none;
+      }
+
+      .btn-toggle-pass {
+        background: none;
+        border: none;
+        color: #2196f3;
+        cursor: pointer;
+        font-size: 12px;
+        text-decoration: underline;
+      }
+

@@ -1,0 +1,718 @@
+/* ===========================
+   SIKURA LANDING - CSS TOKENS & GLOBAL STYLES
+   =========================== */
+
+:root {
+  /* Colores base */
+  --color-dark-bg: #0f1419;
+  --color-dark-card: #1a2332;
+  --color-light-bg: #f8f9fa;
+  --color-light-card: #ffffff;
+
+  /* Colores de acento */
+  --color-primary: #ff5722;
+  --color-primary-hover: #e64a19;
+  --color-accent-blue: #0ea5e9;
+  --color-accent-cyan: #06b6d4;
+
+  /* Texto */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-dark: #1e293b;
+
+  /* Efectos */
+  --glow-blue: rgba(14, 165, 233, 0.15);
+  --glow-cyan: rgba(6, 182, 212, 0.1);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  --spacing-xxl: 8rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-dark-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================
+   UTILITIES
+   =========================== */
+
+.sk-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.sk-text-muted {
+  color: var(--color-text-secondary);
+}
+
+.sk-text-bright {
+  color: var(--color-text-primary);
+}
+
+.sk-text-dark {
+  color: var(--color-text-dark) !important;
+}
+
+.sk-text-accent {
+  color: var(--color-text-secondary);
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+
+.sk-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(15, 20, 25, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-sm) 0;
+}
+
+.sk-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sk-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.sk-logo:hover {
+  opacity: 0.8;
+}
+
+.sk-logo-icon {
+  font-size: 1.5rem;
+  letter-spacing: -0.1em;
+}
+
+.sk-nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+}
+
+.sk-nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.sk-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.sk-nav-links {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-md);
+  margin: 0;
+}
+
+.sk-nav-links a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.sk-nav-links a:hover {
+  color: var(--color-text-primary);
+}
+
+.sk-nav-cta {
+  display: inline-block;
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
+
+.sk-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.sk-btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  box-shadow: 0 4px 14px 0 rgba(255, 87, 34, 0.25);
+}
+
+.sk-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(255, 87, 34, 0.35);
+}
+
+.sk-btn-primary:active {
+  transform: translateY(0);
+}
+
+.sk-btn-primary:focus-visible {
+  outline: 3px solid rgba(255, 87, 34, 0.5);
+  outline-offset: 3px;
+}
+
+.sk-btn-sm {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+}
+
+.sk-btn-lg {
+  padding: 18px 36px;
+  font-size: 1.05rem;
+}
+
+.sk-btn-center {
+  margin: var(--spacing-lg) auto;
+  display: table;
+}
+
+/* ===========================
+   PILL BADGE
+   =========================== */
+
+.sk-pill {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-bottom: var(--spacing-md);
+}
+
+.sk-pill-light {
+  background-color: rgba(14, 165, 233, 0.08);
+  border-color: rgba(14, 165, 233, 0.2);
+  color: var(--color-text-dark);
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+
+.sk-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-md);
+  position: relative;
+  overflow: hidden;
+  background-image:
+    radial-gradient(
+      ellipse 800px 600px at 50% 20%,
+      var(--glow-blue),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 600px 500px at 80% 60%,
+      rgba(59, 130, 246, 0.1),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 700px 550px at 20% 70%,
+      var(--glow-cyan),
+      transparent
+    );
+}
+
+.sk-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(15, 20, 25, 0.4) 70%,
+    rgba(15, 20, 25, 0.8) 100%
+  );
+  pointer-events: none;
+}
+
+.sk-hero-content {
+  max-width: 1000px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.sk-hero-title {
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin: var(--spacing-md) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sk-hero-subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+/* ===========================
+   CUSTOMERS SECTION
+   =========================== */
+
+.sk-customers {
+  padding: var(--spacing-xxl) var(--spacing-md);
+  background-color: var(--color-dark-bg);
+  text-align: center;
+}
+
+.sk-section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.sk-section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xl);
+}
+
+.sk-customers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.sk-customer-logo {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  transition: color 0.3s;
+}
+
+.sk-customer-logo:hover {
+  color: var(--color-text-primary);
+}
+
+/* ===========================
+   SERVICES SECTION
+   =========================== */
+
+.sk-services {
+  padding: var(--spacing-xxl) var(--spacing-md);
+  background-color: var(--color-light-bg);
+  text-align: center;
+}
+
+.sk-section-desc {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--color-text-muted);
+  max-width: 800px;
+  margin: var(--spacing-md) auto var(--spacing-lg);
+  line-height: 1.7;
+}
+
+.sk-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.sk-service-card {
+  background-color: var(--color-dark-card);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  text-align: left;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.sk-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sk-service-icon {
+  margin-bottom: var(--spacing-sm);
+}
+
+.sk-service-card h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: var(--spacing-sm) 0;
+  color: var(--color-text-primary);
+}
+
+.sk-service-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.sk-service-img {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-md);
+}
+
+/* ===========================
+   BENEFITS SECTION
+   =========================== */
+
+.sk-benefits {
+  padding: var(--spacing-xxl) var(--spacing-md);
+  background-color: var(--color-light-bg);
+  text-align: center;
+}
+
+.sk-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.sk-benefit-card {
+  background-color: rgba(14, 165, 233, 0.05);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  text-align: left;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.sk-benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+.sk-benefit-number {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.sk-benefit-card h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin: var(--spacing-sm) 0;
+  line-height: 1.3;
+}
+
+.sk-benefit-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ===========================
+   CTA SECTION
+   =========================== */
+
+.sk-cta {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-md);
+  background-color: var(--color-dark-bg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-image:
+    radial-gradient(
+      ellipse 700px 500px at 30% 50%,
+      var(--glow-blue),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 600px 400px at 70% 50%,
+      var(--glow-cyan),
+      transparent
+    );
+}
+
+.sk-cta-title {
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.sk-footer {
+  background-color: var(--color-light-card);
+  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+}
+
+.sk-footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.sk-footer-brand .sk-logo {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-dark);
+}
+
+.sk-footer-brand .sk-btn {
+  margin: var(--spacing-sm) 0;
+  display: block;
+  width: fit-content;
+}
+
+.sk-footer-link {
+  color: var(--color-text-dark);
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+.sk-footer-column h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.sk-footer-column p,
+.sk-footer-column a {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s;
+}
+
+.sk-footer-column a:hover {
+  color: var(--color-text-dark);
+}
+
+.sk-footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: var(--spacing-md);
+}
+
+.sk-footer-bottom .sk-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.sk-footer-legal {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.sk-footer-legal a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.sk-footer-legal a:hover {
+  color: var(--color-text-dark);
+}
+
+.sk-footer-copy {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+  .sk-nav-toggle {
+    display: flex;
+  }
+
+  .sk-nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--color-dark-card);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-xl) var(--spacing-md);
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .sk-nav-menu.active {
+    right: 0;
+  }
+
+  .sk-nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sk-nav-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sk-hero {
+    padding: var(--spacing-lg) var(--spacing-md);
+    min-height: auto;
+  }
+
+  .sk-customers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sk-services-grid,
+  .sk-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sk-footer-bottom .sk-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.user-is-tabbing *:focus {
+  outline: 3px solid var(--color-accent-blue);
+  outline-offset: 2px;
+}

@@ -1,0 +1,136 @@
+﻿      .filters {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      .table-container {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 12px;
+        overflow: auto;
+      }
+      table.support-table th,
+      table.support-table td {
+        text-align: left;
+        padding: 10px;
+      }
+      .badge {
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 12px;
+      }
+      .badge-prioridad-alta {
+        background: rgba(239, 68, 68, 0.15);
+        color: #f87171;
+      }
+      .badge-prioridad-media {
+        background: rgba(59, 130, 246, 0.15);
+        color: #93c5fd;
+      }
+      .badge-prioridad-baja {
+        background: rgba(34, 197, 94, 0.15);
+        color: #86efac;
+      }
+      .badge-estado-abierto {
+        background: rgba(34, 197, 94, 0.12);
+        color: #86efac;
+      }
+      .badge-estado-en_progreso {
+        background: rgba(234, 179, 8, 0.15);
+        color: #facc15;
+      }
+      .badge-estado-resuelto {
+        background: rgba(59, 130, 246, 0.15);
+        color: #93c5fd;
+      }
+      .badge-estado-cerrado {
+        background: rgba(148, 163, 184, 0.2);
+        color: #cbd5e1;
+      }
+      .section-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px;
+        margin-top: 20px;
+      }
+      .section-card h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+      .content-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .header-actions {
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+        min-width: 180px;
+      }
+      .actions-dropdown {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .dropdown-menu {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 8px);
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        min-width: 220px;
+        padding: 8px;
+        display: none;
+        z-index: 10;
+        box-shadow: 0 12px 28px rgba(2, 6, 23, 0.35);
+      }
+      .dropdown-menu.active {
+        display: grid;
+        gap: 6px;
+      }
+      .dropdown-item {
+        width: 100%;
+        background: transparent;
+        border: 1px solid transparent;
+        color: var(--text);
+        padding: 10px 12px;
+        text-align: left;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .dropdown-item:hover {
+        background: #0b162a;
+        border-color: #1f2937;
+      }
+      .form-panel {
+        display: none;
+      }
+      .form-panel.active {
+        display: block;
+      }
+      .panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .panel-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .estado-control {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+

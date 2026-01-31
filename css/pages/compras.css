@@ -1,0 +1,246 @@
+﻿      /* Estilo mejorado para el modal de compras */
+      .compra-modal {
+        background: #0c1a2c;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.4);
+        max-width: 700px;
+      }
+
+      .compra-modal .modal-header {
+        background: linear-gradient(135deg, #1e40af, #0ea5e9);
+        color: #fff;
+        border-radius: 12px 12px 0 0;
+        padding: 16px 20px;
+      }
+
+      .compra-modal .modal-body {
+        padding: 24px;
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+
+      .compra-modal .form-section {
+        margin-bottom: 20px;
+      }
+
+      .compra-modal .form-section:last-child {
+        margin-bottom: 0;
+      }
+
+      .compra-modal .section-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #64b5f6;
+        margin-bottom: 12px;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 8px;
+      }
+
+      .compra-modal .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 0;
+      }
+
+      .compra-modal .form-grid.cols-1 {
+        grid-template-columns: 1fr;
+      }
+
+      .compra-modal .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .compra-modal .form-group.span-full {
+        grid-column: 1 / -1;
+      }
+
+      .compra-modal .form-group label {
+        color: #b3e5fc;
+        font-weight: 600;
+        font-size: 13px;
+        margin-bottom: 6px;
+      }
+
+      .compra-modal .form-group input,
+      .compra-modal .form-group select,
+      .compra-modal .form-group textarea {
+        background: #1a2638;
+        border: 1px solid rgba(100, 181, 246, 0.3);
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 6px;
+        font-size: 13px;
+        transition: border-color 0.3s;
+      }
+
+      .compra-modal .form-group input:focus,
+      .compra-modal .form-group select:focus,
+      .compra-modal .form-group textarea:focus {
+        outline: none;
+        border-color: #64b5f6;
+        background: #0f1f2e;
+        box-shadow: 0 0 8px rgba(100, 181, 246, 0.2);
+      }
+
+      .compra-modal .helper {
+        color: #90caf9;
+        font-size: 11px;
+        margin-top: 4px;
+        font-style: italic;
+      }
+
+      .compra-modal .form-group textarea {
+        resize: vertical;
+        min-height: 70px;
+        font-family: inherit;
+      }
+
+      .compra-modal .note-info {
+        background: rgba(100, 181, 246, 0.1);
+        border-left: 3px solid #64b5f6;
+        padding: 10px 12px;
+        border-radius: 4px;
+        font-size: 12px;
+        color: #90caf9;
+        margin-bottom: 16px;
+      }
+
+      .compra-modal .modal-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .compra-modal .btn-secondary,
+      .compra-modal .btn-primary {
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .compra-modal .btn-secondary {
+        background: rgba(255, 255, 255, 0.1);
+        color: #90caf9;
+      }
+
+      .compra-modal .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .compra-modal .btn-primary {
+        background: linear-gradient(135deg, #2196f3, #1e40af);
+        color: #fff;
+      }
+
+      .compra-modal .btn-primary:hover {
+        background: linear-gradient(135deg, #1e88e5, #1565c0);
+      }
+
+      .estado-renovacion {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 180px;
+      }
+
+      .renovacion-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        color: #c7d2fe;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32);
+        width: fit-content;
+      }
+
+      .renovacion-pill .pill-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: currentColor;
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.05);
+      }
+
+      .renovacion-pill .pill-count {
+        padding: 2px 8px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.12);
+        font-weight: 800;
+      }
+
+      .renovacion-pill.disponible {
+        background: linear-gradient(120deg, #0f172a, #0b3b2b);
+        color: #34d399;
+        border-color: rgba(52, 211, 153, 0.45);
+      }
+
+      .renovacion-pill.por-vencer {
+        background: linear-gradient(120deg, #1f2937, #facc15);
+        color: #0b1729;
+        border-color: rgba(250, 204, 21, 0.5);
+      }
+
+      .renovacion-pill.vence-hoy {
+        background: linear-gradient(120deg, #f97316, #fbbf24);
+        color: #0f172a;
+        border-color: rgba(249, 115, 22, 0.6);
+      }
+
+      .renovacion-pill.vencido {
+        background: linear-gradient(120deg, rgba(239, 68, 68, 0.18), #7f1d1d);
+        color: #fca5a5;
+        border-color: rgba(239, 68, 68, 0.5);
+      }
+
+      .renovacion-pill.muted {
+        background: rgba(255, 255, 255, 0.05);
+        color: #94a3b8;
+        border-color: rgba(148, 163, 184, 0.3);
+      }
+
+      .renovacion-meta {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        font-size: 12px;
+        color: #94a3b8;
+      }
+
+      .renovacion-meta span {
+        padding: 4px 8px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      @media (max-width: 768px) {
+        .compra-modal .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .compra-modal .form-group.span-full {
+          grid-column: 1;
+        }
+
+        .compra-modal .modal-body {
+          padding: 20px;
+        }
+      }
+

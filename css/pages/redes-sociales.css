@@ -1,0 +1,480 @@
+﻿      .redes-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .red-social {
+        background: var(--card);
+        border: 1px solid #1f2937;
+        border-radius: 8px;
+        padding: 20px;
+        transition: border-color 0.3s;
+      }
+
+      .red-social:hover {
+        border-color: var(--accent);
+      }
+
+      .red-social-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #1f2937;
+      }
+
+      .red-social-header h3 {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+
+      .red-social-header .status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .status.conectado {
+        color: #22c55e;
+      }
+
+      .status.conectado::before {
+        content: "●";
+        font-size: 1.2rem;
+      }
+
+      .status.desconectado::before {
+        content: "●";
+        font-size: 1.2rem;
+        color: #ef4444;
+      }
+
+      .red-config {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: rgba(34, 197, 94, 0.1);
+        border-radius: 6px;
+        border-left: 3px solid var(--accent);
+      }
+
+      .red-config label {
+        display: block;
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .red-config input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #334155;
+        border-radius: 6px;
+        background: var(--input-bg);
+        color: var(--text);
+        font-size: 0.9rem;
+      }
+
+      .red-config-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .red-config-actions button {
+        flex: 1;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: opacity 0.2s;
+      }
+
+      .red-config-actions .btn-guardar {
+        background: var(--accent);
+        color: white;
+      }
+
+      .red-config-actions .btn-guardar:hover {
+        opacity: 0.85;
+      }
+
+      .red-config-actions .btn-cancelar {
+        background: #1f2937;
+        color: var(--text);
+        border: 1px solid #334155;
+      }
+
+      .red-config-actions .btn-cancelar:hover {
+        background: #0f172a;
+      }
+
+      .instagram-feed {
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      .placeholder-feed {
+        width: 100%;
+        height: 600px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .placeholder-feed h4 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .placeholder-feed p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.95rem;
+      }
+
+      .redes-info {
+        background: var(--card);
+        border: 1px solid #1f2937;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .redes-info h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: var(--text);
+      }
+
+      .redes-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+      }
+
+      .red-item {
+        background: rgba(34, 197, 94, 0.1);
+        border: 1px solid #1f2937;
+        padding: 15px;
+        border-radius: 6px;
+        text-align: center;
+      }
+
+      .red-item .icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .red-item .nombre {
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 5px;
+      }
+
+      .red-item .estado {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .red-item.conectado {
+        border-color: var(--accent);
+        background: rgba(34, 197, 94, 0.15);
+      }
+
+      @media (max-width: 1024px) {
+        .redes-container {
+          grid-template-columns: 1fr;
+        }
+
+        .instagram-feed {
+          height: 500px;
+        }
+
+        .placeholder-feed {
+          height: 500px;
+        }
+      }
+
+
+      .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu-group {
+        margin-bottom: 10px;
+      }
+
+      .menu-group summary {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background 0.2s;
+        font-weight: 600;
+      }
+
+      .menu-group summary:hover {
+        background: rgba(34, 197, 94, 0.1);
+      }
+
+      .menu-group ul {
+        list-style: none;
+        padding: 0 0 0 10px;
+        margin: 5px 0;
+      }
+
+      .menu-group li {
+        margin: 5px 0;
+      }
+
+      .menu-group a {
+        display: block;
+        padding: 8px 10px;
+        color: var(--muted);
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.2s;
+        font-size: 0.9rem;
+      }
+
+      .menu-group a:hover {
+        color: var(--accent);
+        background: rgba(34, 197, 94, 0.1);
+      }
+
+      .menu-group a.active {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .dashboard-header {
+        background: var(--card);
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        border: 1px solid #1f2937;
+      }
+
+      .dashboard-header h1 {
+        margin: 0 0 10px 0;
+        margin-left: 60px;
+      }
+
+      .dashboard-header p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .instagram-actions {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .btn-inbox {
+        flex: 1;
+        padding: 12px 16px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, opacity 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .btn-inbox:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+
+      .btn-profile {
+        flex: 1;
+        padding: 12px 16px;
+        background: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, opacity 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .btn-profile:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+
+      /* NAVEGADOR INTEGRADO */
+      .browser-container {
+        width: 100%;
+        height: 600px;
+        border: 1px solid #1f2937;
+        border-radius: 8px;
+        background: var(--card);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .browser-toolbar {
+        background: #1a1f35;
+        border-bottom: 1px solid #1f2937;
+        padding: 12px 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .browser-buttons {
+        display: flex;
+        gap: 5px;
+      }
+
+      .browser-btn {
+        width: 36px;
+        height: 36px;
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 4px;
+        color: var(--text);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        font-size: 1.1rem;
+      }
+
+      .browser-btn:hover {
+        background: #1f2937;
+        border-color: var(--accent);
+      }
+
+      .browser-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .browser-url {
+        flex: 1;
+        min-width: 250px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .browser-url input {
+        flex: 1;
+        padding: 8px 12px;
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 4px;
+        color: var(--text);
+        font-size: 0.9rem;
+      }
+
+      .browser-url input:focus {
+        outline: none;
+        border-color: var(--accent);
+      }
+
+      .browser-go {
+        padding: 8px 16px;
+        background: var(--accent);
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        font-weight: 600;
+        transition: opacity 0.2s;
+      }
+
+      .browser-go:hover {
+        opacity: 0.9;
+      }
+
+      .browser-content {
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .browser-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: white;
+      }
+
+      .browser-blocked {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.1) 0%,
+          rgba(118, 75, 162, 0.1) 100%
+        );
+        color: var(--text);
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .browser-blocked h4 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .browser-blocked p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .browser-blocked button {
+        padding: 10px 20px;
+        background: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: opacity 0.2s;
+      }
+
+      .browser-blocked button:hover {
+        opacity: 0.9;
+      }
+
+

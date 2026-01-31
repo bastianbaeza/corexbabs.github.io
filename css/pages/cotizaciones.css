@@ -1,0 +1,228 @@
+﻿      /* Sidebar + botón hamburguesa (Cotizaciones) */
+      .cotizaciones-container {
+        max-width: 1400px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+
+      .header-cotizaciones {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .header-cotizaciones h1 {
+        color: #2c3e50;
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      .btn-nuevo-cotizacion {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+
+      .btn-nuevo-cotizacion:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+
+      .cotizaciones-table {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      thead {
+        background: #34495e;
+        color: white;
+      }
+
+      th {
+        padding: 15px;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ecf0f1;
+      }
+
+      tbody tr:hover {
+        background-color: #f8f9fa;
+      }
+
+      .btn-small {
+        padding: 6px 12px;
+        font-size: 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 5px;
+        transition: all 0.2s;
+      }
+
+      .btn-ver {
+        background: #3498db;
+        color: white;
+      }
+
+      .btn-ver:hover {
+        background: #2980b9;
+      }
+
+      .btn-eliminar {
+        background: #e74c3c;
+        color: white;
+      }
+
+      .btn-eliminar:hover {
+        background: #c0392b;
+      }
+
+      /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal.active,
+      .modal[style*="display: block"] {
+        display: flex !important;
+      }
+
+      .modal-content {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        max-height: 90vh;
+        overflow-y: auto;
+        margin: auto;
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #ecf0f1;
+      }
+
+      .modal-header h2 {
+        margin: 0;
+        font-size: 22px;
+        color: #2c3e50;
+      }
+
+      .modal-close {
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #7f8c8d;
+        line-height: 1;
+      }
+
+      .modal-close:hover {
+        color: #2c3e50;
+      }
+
+      .modal-body {
+        padding: 20px;
+      }
+
+      .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 20px;
+        border-top: 1px solid #ecf0f1;
+        background: #f8f9fa;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #bdc3c7;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: inherit;
+        box-sizing: border-box;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      /* Estilos para modal de detalle */
+      #modalDetalleCotizacion .modal-body p {
+        color: #2c3e50;
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      #modalDetalleCotizacion .modal-body strong {
+        color: #34495e;
+        font-weight: 600;
+      }
+
+      #modalDetalleCotizacion .modal-body span {
+        color: #555;
+      }
+
+      #modalDetalleCotizacion textarea {
+        color: #2c3e50;
+        background: white;
+      }
+
+      .form-group input[readonly] {
+        background: #f8fafc;
+        color: #64748b;
+      }
+
+

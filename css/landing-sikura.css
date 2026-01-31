@@ -1,0 +1,289 @@
+/* ===========================
+   SIKURA HERO - ESTILOS ESPECÍFICOS
+   =========================== */
+
+/* Reset específico para la sección hero-sikura */
+.hero-sikura {
+  position: relative;
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: calc(var(--header-h) + 2rem);
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  /* Background con gradientes radiales para glow */
+  background-color: #07101b;
+  background-image:
+    radial-gradient(
+      ellipse 800px 600px at 50% 20%,
+      rgba(14, 165, 233, 0.15),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 600px 500px at 80% 60%,
+      rgba(59, 130, 246, 0.1),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 700px 550px at 20% 70%,
+      rgba(6, 182, 212, 0.08),
+      transparent
+    );
+}
+
+/* Vignette effect con ::before */
+.hero-sikura::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(7, 16, 27, 0.4) 70%,
+    rgba(7, 16, 27, 0.8) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-sikura-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-media {
+  flex: 0 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  opacity: 0.9;
+  box-shadow:
+    0 20px 60px rgba(14, 165, 233, 0.25),
+    0 10px 30px rgba(0, 0, 0, 0.4);
+  filter: saturate(1.05) contrast(1.05);
+  transition: all 0.3s ease;
+}
+
+.hero-media img:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  box-shadow:
+    0 25px 70px rgba(14, 165, 233, 0.3),
+    0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ===========================
+   PILL
+   =========================== */
+.sikura-pill {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9);
+
+  /* Backdrop filter con fallback */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Fallback para navegadores que no soportan backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .sikura-pill {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ===========================
+   TÍTULO
+   =========================== */
+.sikura-title {
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sikura-title .muted {
+  color: #a1a1aa;
+  display: block;
+}
+
+.sikura-title .bright {
+  color: #ffffff;
+  display: block;
+}
+
+/* ===========================
+   SUBTÍTULO
+   =========================== */
+.sikura-subtitle {
+  max-width: 700px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* ===========================
+   BOTÓN CTA
+   =========================== */
+.sikura-cta {
+  padding: 16px 28px;
+  background-color: #ff4a2d;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px 0 rgba(255, 74, 45, 0.25);
+  margin-top: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sikura-cta:hover {
+  background-color: #e63e25;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(255, 74, 45, 0.35);
+}
+
+.sikura-cta:active {
+  transform: translateY(0);
+}
+
+/* Focus visible para accesibilidad */
+.sikura-cta:focus-visible {
+  outline: 3px solid rgba(255, 74, 45, 0.5);
+  outline-offset: 3px;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .hero-sikura {
+    padding: 1.5rem 1rem;
+    padding-top: calc(var(--header-h) + 1rem);
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-sikura-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-media {
+    max-width: 100%;
+    order: -1;
+  }
+
+  .hero-media img {
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .sikura-pill {
+    padding: 10px 16px;
+    font-size: 0.8125rem;
+  }
+
+  .sikura-title {
+    gap: 0.25rem;
+  }
+
+  .sikura-subtitle {
+    font-size: 1rem;
+  }
+
+  .sikura-cta {
+    padding: 14px 24px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-sikura {
+    padding-top: calc(var(--header-h) + 0.5rem);
+    padding-bottom: 2rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    min-height: auto;
+  }
+
+  .hero-content {
+    margin-bottom: 0;
+  }
+
+  .hero-media {
+    display: none;
+  }
+
+  .sikura-pill {
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+
+  .sikura-cta {
+    padding: 12px 20px;
+  }
+}
+
+/* ===========================
+   ACCESIBILIDAD - REDUCED MOTION
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+  .sikura-cta {
+    transition: none;
+  }
+
+  .sikura-cta:hover {
+    transform: none;
+  }
+}

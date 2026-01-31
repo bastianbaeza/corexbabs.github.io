@@ -1,0 +1,63 @@
+﻿      /* Estilos para botones WhatsApp */
+      .btn-whatsapp {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: none;
+        background: #25d366;
+        color: white;
+        cursor: pointer;
+        font-size: 0.9em;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+        text-decoration: none;
+      }
+      .btn-whatsapp:hover:not(.btn-disabled) {
+        background: #1ead50;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      }
+      .btn-whatsapp.btn-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+      .btn-copy {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: none;
+        background: #667eea;
+        color: white;
+        cursor: pointer;
+        font-size: 0.9em;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        margin-left: 4px;
+      }
+      .btn-copy:hover {
+        background: #5568d3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+      #btn-whatsapp-todos {
+        background: #25d366;
+        color: white;
+        padding: 8px 14px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+      #btn-whatsapp-todos:hover {
+        background: #1ead50;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      }
+
